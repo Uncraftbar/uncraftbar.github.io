@@ -1,0 +1,272 @@
+/* ===FONTS=== */
+
+
+@font-face {
+    font-display: swap; 
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/raleway-v29-latin-regular.woff2') format('woff2'); 
+  }
+
+  @font-face {
+    font-display: swap; 
+    font-family: 'Raleway';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/raleway-v29-latin-italic.woff2') format('woff2'); 
+  }
+
+  @font-face {
+    font-display: swap; 
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/raleway-v29-latin-700.woff2') format('woff2'); 
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: 'Raleway';
+    font-style: italic;
+    font-weight: 700;
+    src: url('../fonts/raleway-v29-latin-700italic.woff2') format('woff2'); 
+  }
+
+  /* === GLOBAL=== */
+
+:root {
+    --dunkel-lila:        #2f1340;
+    --primaere-schriftart: Raleway;
+    --sekundaere-schriftart: "Helvetica Neue";
+    --tertiaere-schriftart: Arial;
+    --fallback-schriftart: sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    font-family: var(--primaere-schriftart, --sekundaere-schriftart, --tertiaere-schriftart, --fallback-schriftart);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ===GLOBAL=== */
+
+.text {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.btn-typ-1 {
+  background-color:#732e9b;
+  text-decoration: none;
+  border: 2px solid #4b1e66;
+  border-radius: 20px;
+  color: #FFF;
+  padding: .4rem .6rem;
+  transition: border .3s ease-in-out;
+}
+
+.btn-typ-1:hover {
+  border: 2px solid #FFF;
+  color: #FFF;
+  padding: .4rem .6rem;
+}
+
+
+
+
+
+/* === HEADER DESKTOP === */
+
+.header-nav-desktop {
+    display: grid;
+    grid-template-areas: "logo button test";
+    grid-template-columns: 1fr 30rem 3%;
+    grid-template-rows: 50px;
+    background-color: #2f1340;
+    color: white;
+  }
+
+.header-nav-desktop > ul > li > a {
+    text-decoration: none;
+    color: white;
+    padding: .9rem;
+    border-radius: 10px;
+
+}
+
+.header-nav-desktop ul {
+    grid-area: button;
+    list-style-type: none;
+  }
+
+.header-nav-desktop > ul > li {
+    display: inline;
+
+}
+
+.header-nav-desktop > #logo {
+    font-size: 1.5rem;
+    padding: .6rem 3rem;
+    grid-area: logo;
+}
+
+.header-nav-desktop .active {
+    background-color: #4b1e66;
+}
+
+/* === HEADER MOBILE === */
+
+.header-nav-mobile {
+    display: grid;
+    grid-template-areas: "logo button test";
+    grid-template-columns: 1fr 13.1rem 3%;
+    grid-template-rows: 50px;
+    background-color: #2f1340;
+    color: white;
+  }
+
+.header-nav-mobile a {
+    text-decoration: none;
+    color: white;
+    padding: .9rem;
+    border-radius: 10px;
+
+}
+
+
+.header-nav-mobile > #logo {
+    font-size: 1.5rem;
+    padding: .6rem .4rem;
+    padding-right: 0;
+    grid-area: logo;
+}
+
+.header-nav-mobile .active {
+    background-color: #4b1e66;
+}
+
+.dropbtn {
+    grid-area: button;
+    background-color: #4b1e66;
+    color: white;
+    padding: .2rem .9rem;
+    font-size: 32px;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    float: right;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2f1340;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {background-color: #f1f1f1}
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown:hover .dropbtn {
+    background-color: #732e9b;
+  }
+
+@media (max-width: 768px) {
+
+    .header-nav-desktop {
+        display: none;
+    }
+
+}
+
+@media (min-width: 769px) {
+
+  .header-nav-mobile {
+    display: none;
+  }
+
+}
+
+
+/* === SHOWCASE === */
+
+.container-3 {
+  display: grid;
+  grid-template-areas: "Minecraft Scratch Placeholder";
+  grid-template-columns: 1fr 1.2fr 1fr;
+  grid-template-rows: auto;
+  background-color: #4d2068;
+}
+
+.container-3 > div {
+  margin: 1rem;
+  min-height: 800px;
+  border: 2px solid #732e9b;
+  background-color: #2f1340;
+}
+
+#showcase-box-1 {
+  grid-area: Minecraft;
+  display: grid;
+  grid-template-rows: 100px auto auto 70px;
+}
+
+#showcase-box-2 {
+  grid-area: Scratch;
+  display: grid;
+  grid-template-rows: 100px auto auto 70px;
+}
+
+#showcase-box-3 {
+  grid-area: Placeholder;
+  display: grid;
+  grid-template-rows: 100px auto auto 70px;
+}
+
+div > img {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+}
+
+#showcase-box-1 > a,#showcase-box-2 > a,#showcase-box-3 > a {
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+
+
+
+
+
+
