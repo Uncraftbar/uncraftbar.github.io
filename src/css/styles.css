@@ -128,7 +128,7 @@ body {
 }
 
 .header-nav-desktop .active {
-    background-color: #4b1e66;
+    background-color: #771e6b;
 }
 
 /* === HEADER MOBILE === */
@@ -440,51 +440,112 @@ margin: .5rem;
   }
 }
 
-/* ===SCRATCH EMBEDED=== */
+/* ===scratch embed=== */
 
-.scratch-container {
-  display: grid;
-  grid-template-areas: "text1 Scratch text2";
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: auto;
-  background-color: #4d2068;
-  gap: 10px;
+  .scratch-container {
+    display: grid;
+    grid-template-areas: "text1 Scratch text2";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto;
+    background-color: #4d2068;
+    gap: 10px;
+  }
+
+  #scratch-embeded {
+    grid-area: Scratch;
+    width: 100%;
+    height: 47.7rem;
+    border: 5px solid #732e9b;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  #scratch-text1, #scratch-text2 {
+    color: white;
+    border: 5px solid #732e9b;
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+    padding: 1rem;
+    background-color: #2f1340;
+    font-size: 1.3rem;
+  }
+
+  #scratch-text1 > h1, #scratch-text2 > h1 {
+    font-size: 2.3rem;
+  }
+
+  #scratch-text1 {
+    grid-area: text1;
+    margin-left: 1rem;
+  }
+
+  #scratch-text2 {
+    grid-area: text2;
+    margin-right: 1rem;
+  }
+
+
+.mobile-message {
+  display: none;
 }
 
-#scratch-embeded {
-  grid-area: Scratch;
-  width: 100%;
-  height: 47.7rem;
-  border: 5px solid #732e9b;
-  border-radius: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+@media ( max-width: 1260px ) {
+  .scratch-container {
+    display: grid;
+    grid-template-areas: "text1" "Scratch" "text2";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto 1fr;
+    background-color: #4d2068;
+    gap: 0;
+  }
+
+  #scratch-text1, #scratch-text2 {
+    margin-top: 1.4rem;
+    margin-bottom: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1rem;
+    background-color: #2f1340;
+    font-size: 1.3rem;
+  }
+
 }
 
-#scratch-text1, #scratch-text2 {
-  color: white;
-  border: 5px solid #732e9b ;
-  margin-top: 1.4rem;
-  margin-bottom: 1.4rem;
-  padding: 1rem;
-  background-color: #2f1340;
-  font-size: 1.3rem;
+@media (max-width: 768px) {
+  .scratch-container {
+    display: grid;
+    grid-template-areas: "text1";
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  
+  #scratch-embeded {
+    display: none;
+  }
+
+  #scratch-text1 {
+    display: none;
+  }
+
+  #scratch-text2 {
+    grid-area: text1;
+    width: 90%;
+    font-size: 2rem;
+    min-height: 800px;
+    margin: 1rem auto;
+  }
+
+  .mobile-message {
+    display: block;
+    text-align: center;
+    background-color: #771e6b;
+    margin: 0;
+    color: red;
+    font-size: 1.2rem;
+  }
 }
 
-#scratch-text1 > h1, #scratch-text2 > h1 {
-  font-size: 2.3rem;
-}
-
-
-#scratch-text1 {
-  grid-area: text1;
-  margin-left: 1rem;
-}
-
-#scratch-text2 {
-  grid-area: text2;
-  margin-right: 1rem;
-}
 
 /* ===Über mich bereich=== */
 
