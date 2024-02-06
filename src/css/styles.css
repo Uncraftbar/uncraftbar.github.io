@@ -50,6 +50,7 @@ html {
 body {
     margin: 0;
     font-family: var(--primaere-schriftart, --sekundaere-schriftart, --tertiaere-schriftart, --fallback-schriftart);
+    background-color: #4b1e66;
 }
 
 * {
@@ -226,6 +227,9 @@ body {
 
 .showcase-container {
   display: grid;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
   grid-template-areas: "Minecraft Scratch Placeholder";
   grid-template-columns: 1fr 1.2fr 1fr;
   grid-template-rows: auto;
@@ -444,6 +448,9 @@ margin: .5rem;
 
   .scratch-container {
     display: grid;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     grid-template-areas: "text1 Scratch text2";
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: auto;
@@ -570,7 +577,7 @@ margin: .5rem;
   border-radius: 25px;
   padding: 15px;
   background-color: #4c1e668f;
-  width: 90%;
+  width: 85%;
   height: 100%;
 }
 
@@ -583,6 +590,9 @@ margin: .5rem;
 
 .kenntnisse-container {
   display: grid;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #4b1e66;
   grid-template-areas: "überschrift text" "bild text";
 }
