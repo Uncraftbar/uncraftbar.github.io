@@ -235,7 +235,8 @@ body {
 .showcase-container > div {
   margin: 1rem;
   min-height: 800px;
-  border: 2px solid #732e9b;
+  border: 5px solid #732e9b;
+  border-radius: 20px;
   background-color: #2f1340;
 }
 
@@ -368,23 +369,23 @@ margin: .5rem;
   #showcase-box-1 {
     grid-area: Minecraft;
     display: grid;
-    grid-template-rows: 70px 400px auto 70px;
+    grid-template-rows: 70px 300px auto 70px;
   }
   
   #showcase-box-2 {
     grid-area: Scratch;
     display: grid;
-    grid-template-rows: 70px 400px auto 70px;
+    grid-template-rows: 70px auto 300px 70px;
   }
   
   #showcase-box-3 {
     grid-area: Placeholder;
     display: grid;
-    grid-template-rows: 70px 400px auto 70px;
+    grid-template-rows: 70px 300px auto 70px;
   }
 
   .showcase-container > div {
-    min-height: 800px;
+    min-height: 600px;
   }
 
 }
@@ -399,7 +400,7 @@ margin: .5rem;
   #showcase-box-2 {
     grid-area: Scratch;
     display: grid;
-    grid-template-rows: 70px 300px auto 70px;
+    grid-template-rows: 70px auto 300px 70px;
   }
   
   #showcase-box-3 {
@@ -545,6 +546,27 @@ margin: .5rem;
     margin-right: auto;
     align-self: center;
     margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .kenntnisse-container {
+    display: grid;
+    background-color: #4b1e66;
+    grid-template-areas: "überschrift" "text";
+  }
+  
+  .kenntnisse-bild {
+  display: none;
+  }
+
+  .kenntnisse-text {
+    grid-area: text;
+    text-align: left;
+    color: white;
+    font-size: 1.4rem;
+    padding: 0 1rem; 
+    margin: .5rem;
+  }
 }
 
 /* ===footer=== */
