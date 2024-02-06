@@ -51,9 +51,9 @@
         </div>
         <div id="showcase-box-2" class="text">
             <h1>Über Mich</h1>
+            <p>Joel, 14 Jahre alt, Technikenthusiast. Ich liebe es, kreative Projekte zu entwickeln, von 3D-Spielen in Scratch bis zur Modifikation von Minecraft.<br> Willkommen auf meiner Portfolio-Website!</p>
             <img src="src/img/Placeholder.png" alt="Placeholder">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, sit impedit, reiciendis totam quia dolore eos iste commodi at possimus voluptatem perspiciatis, temporibus delectus ut eligendi magnam magni dolorum recusandae.</p>
-            <a onClick="document.getElementById('info-container').scrollIntoView({ behavior: 'smooth' });" class="btn-typ-1 showcase-btn noselect">Ansehen</a>
+            <a onClick="document.getElementById('info-container').scrollIntoView({ behavior: 'smooth' });" class="btn-typ-1 showcase-btn noselect">Mehr Info</a>
         </div>
         <div id="showcase-box-3" class="text">
             <h1>Scratch</h1>
@@ -64,17 +64,30 @@
 
     </section>
 
-    <!-- ÜBER MICH -->
 
-    <section id="info-container">
-        <div class="spacer"></div>
-        <div><h1 class="text">Über mich:</h1></div>
-        <div><p>        
-            Hallo, mein Name ist Joel und ich bin 14 Jahre alt. Bereits im Alter von 10 Jahren habe ich meinen ersten Computer selbst zusammengebaut, was mein Interesse an Single-Board-Computern wie dem Raspberry Pi geweckt hat. Seitdem habe ich mich leidenschaftlich mit verschiedenen Projekten beschäftigt, darunter die Entwicklung eines 3D-Spiels mit Scratch und die Modifikation des Spiels Minecraft in Java.<br><br>
-            Ich verfüge über grundlegende Programmierkenntnisse und ein solides Verständnis für Mathematik. Die meisten meiner Lerninhalte beziehe ich aus englischsprachigen Youtube-Videos. Zusätzlich beherrsche ich HTML und CSS, um meine Webentwicklungsprojekte zu realisieren.<br><br>
-            Mein Portfolio repräsentiert meine Leidenschaft für Technologie und mein Streben nach kreativer Umsetzung. Durch meine vielfältigen Projekte möchte ich meine Fähigkeiten weiter ausbauen und neue Herausforderungen meistern. Willkommen auf meiner Portfolio-Website, auf der du mehr über meine bisherigen Arbeiten und zukünftigen Projekte erfahren kannst!</p></div>
+    
+    
+<!-- ÜBER MICH -->
 
-    </section>
+<section id="info-container">
+    <div class="spacer"></div>
+    <div><h1 class="text">Über mich:</h1></div>
+    <div><p>        
+        Hallo, mein Name ist Joel und ich bin <script>
+        var geburtsdatum = new Date(2009, 1, 28); // Geburtsdatum festlegen (Jahr, Monat, Tag)
+        var aktuellesDatum = new Date(); // Aktuelles Datum erhalten
+        var alterInJahren = aktuellesDatum.getFullYear() - geburtsdatum.getFullYear();
+        var aktuellerMonat = aktuellesDatum.getMonth();
+        var geburtsMonat = geburtsdatum.getMonth();
+        if (aktuellerMonat < geburtsMonat || (aktuellerMonat == geburtsMonat && aktuellesDatum.getDate() < geburtsdatum.getDate())) {
+            alterInJahren--;
+        }
+        document.write(alterInJahren);
+        </script> Jahre alt.<br>
+        Bereits im Alter von 10 Jahren habe ich meinen ersten Computer selbst zusammengebaut, was mein Interesse an Single-Board-Computern wie dem Raspberry Pi geweckt hat. Seitdem habe ich mich leidenschaftlich mit verschiedenen Projekten beschäftigt, darunter die Entwicklung eines 3D-Spiels mit Scratch und die Modifikation des Spiels Minecraft in Java.<br><br>
+        Ich verfüge über grundlegende Programmierkenntnisse und ein solides Verständnis für Mathematik. Die meisten meiner Lerninhalte beziehe ich aus englischsprachigen Youtube-Videos. Zusätzlich beherrsche ich HTML und CSS, um meine Webentwicklungsprojekte zu realisieren.<br><br>
+        Mein Portfolio repräsentiert meine Leidenschaft für Technologie und mein Streben nach kreativer Umsetzung. Durch meine vielfältigen Projekte möchte ich meine Fähigkeiten weiter ausbauen und neue Herausforderungen meistern. Willkommen auf meiner Portfolio-Website, auf der du mehr über meine bisherigen Arbeiten und zukünftigen Projekte erfahren kannst!</p></div>
+</section>
 
 
 
