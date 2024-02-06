@@ -81,13 +81,12 @@ body {
 }
 
 .noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+  -webkit-touch-callout: none; 
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none; 
+            user-select: none; 
 }
 
 
@@ -502,6 +501,7 @@ margin: .5rem;
 
 #info-container > div > p {
   color: white;
+  font-size: 1.5rem;
   margin-left: auto;
   margin-right: auto;
   border: 2px solid #732e9b;
@@ -509,7 +509,7 @@ margin: .5rem;
   padding: 15px;
   background-color: #4c1e668f;
   width: 90%;
-  height: 70%;
+  height: 90%;
 }
 
 .spacer {
@@ -529,7 +529,7 @@ margin: .5rem;
   grid-area: text;
   text-align: left;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   border: 5px solid #732e9b;
   background-color: #2f1340;
   border-radius: 25px;
