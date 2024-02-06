@@ -80,6 +80,15 @@ body {
   padding: .4rem .6rem;
 }
 
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
 
 
 
@@ -545,12 +554,21 @@ margin: .5rem;
   height:auto;
   width: 100%;
   background-color: #1d0d27;
+  grid-template-areas: "text space source";
 }
 
 #footer-container p {
+  grid-area: text;
   text-align: left;
   margin-left: 10px;
   font-size: 1rem;
+}
+
+#footer-container a {
+  grid-area: source;
+  text-align: right;
+  font-size: 1rem;
+  margin: auto 2rem;
 }
 
 
