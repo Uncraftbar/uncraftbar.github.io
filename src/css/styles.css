@@ -419,19 +419,19 @@ margin: .5rem;
   #showcase-box-1 {
     grid-area: Minecraft;
     display: grid;
-    grid-template-rows: 70px 200px auto 70px;
+    grid-template-rows: 70px 300px auto 70px;
   }
   
   #showcase-box-2 {
     grid-area: Scratch;
     display: grid;
-    grid-template-rows: 70px 200px auto 70px;
+    grid-template-rows: 70px auto 300px 70px;
   }
   
   #showcase-box-3 {
     grid-area: Placeholder;
     display: grid;
-    grid-template-rows: 70px 200px auto 70px;
+    grid-template-rows: 70px  300px auto 70px;
   }
 
   .showcase-container > div {
@@ -490,7 +490,7 @@ margin: .5rem;
 #info-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100px 70px auto;
+  grid-template-rows: 100px 70px auto 50px;
   min-height: 500px;
   background-color: #2f1340;
 }
@@ -509,7 +509,7 @@ margin: .5rem;
   padding: 15px;
   background-color: #4c1e668f;
   width: 90%;
-  height: 90%;
+  height: 100%;
 }
 
 .spacer {
