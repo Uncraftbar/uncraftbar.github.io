@@ -290,7 +290,7 @@ margin: .5rem;
 padding: 2rem;
 }
 
-@media (max-width: 1260px) {
+@media (max-width: 1260px) { 
 
   .text {
     font-size: 1rem;
@@ -304,26 +304,25 @@ padding: 2rem;
   #showcase-box-1 {
     grid-area: Minecraft;
     display: grid;
-    grid-template-rows: 100px 350px auto 70px;
   }
   
   #showcase-box-2 {
     grid-area: Scratch;
     display: grid;
-    grid-template-rows: 100px 350px auto 70px;
+    min-height: 400px;
   }
   
   #showcase-box-3 {
     grid-area: Placeholder;
     display: grid;
-    grid-template-rows: 100px 350px auto 70px;
   }
 
-  .showcase-container > div {
-    min-height: 700px;
-  }
+  #showcase-box-1 > p,#showcase-box-2 > p,#showcase-box-3 > p {
+    margin: .5rem;
+    padding: .5rem;
+    }
+
 }
-
 
 @media (max-width: 1024px) {
   .text {
@@ -334,29 +333,39 @@ padding: 2rem;
   .showcase-container {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  
 
   #showcase-box-1 {
     grid-area: Minecraft;
     display: grid;
-    grid-template-rows: 70px 250px auto 70px;
+    grid-template-rows: 60px auto 60px;
   }
   
   #showcase-box-2 {
     grid-area: Scratch;
     display: grid;
-    grid-template-rows: 70px 250px auto 70px;
+    min-height: 350px;
+    grid-template-rows: 60px auto 60px;
   }
   
   #showcase-box-3 {
     grid-area: Placeholder;
     display: grid;
-    grid-template-rows: 70px 250px auto 70px;
+    grid-template-rows: 60px auto 60px;
   }
 
-  .showcase-container > div {
-    min-height: 600px;
-  }
+  #showcase-box-1 > p,#showcase-box-2 > p,#showcase-box-3 > p {
+    margin: .5rem;
+    padding: .5rem;
+    }
+
+  #showcase-box-1 > h1,#showcase-box-2 > h1,#showcase-box-3 > h1 {
+    margin: .5rem;
+    padding: .5rem;
+    }
+
+    .showcase-container > div {
+      min-height: 0;
+    }
 }
 
 @media (max-width: 768px) {
@@ -381,23 +390,23 @@ padding: 2rem;
   #showcase-box-1 {
     grid-area: Minecraft;
     display: grid;
-    grid-template-rows: 70px 300px auto 70px;
+    grid-template-rows: 70px 150px 60px;
   }
   
   #showcase-box-2 {
     grid-area: Scratch;
     display: grid;
-    grid-template-rows: 70px auto 300px 70px;
+    grid-template-rows: 70px 200px 60px;
   }
   
   #showcase-box-3 {
     grid-area: Placeholder;
     display: grid;
-    grid-template-rows: 70px 300px auto 70px;
+    grid-template-rows: 70px 150px 60px;
   }
 
   .showcase-container > div {
-    min-height: 600px;
+    min-height: 0;
   }
 
 }
@@ -457,6 +466,7 @@ padding: 2rem;
   .scratch-container {
     display: grid;
     width: 90%;
+    margin-top: 4rem;
     margin-left: auto;
     margin-right: auto;
     grid-template-areas: "text1 Scratch text2";
@@ -473,17 +483,19 @@ padding: 2rem;
     border: 5px solid #732e9b;
     border-radius: 20px;
     margin-top: 10px;
-    margin-bottom: 148px;
+    margin-bottom: 84px;
+    box-shadow: 0px 0px 35px 10px #2F1340;
   }
 
   #scratch-text1, #scratch-text2 {
     color: white;
     border: 5px solid #732e9b;
     margin-top: 1.4rem;
-    margin-bottom: 170px;
+    margin-bottom: 90px;
     padding: 1rem;
     background-color: #2f1340;
     font-size: 1.2rem;
+    box-shadow: 0px 0px 35px 10px #2F1340;
   }
 
   #scratch-text1 > h1, #scratch-text2 > h1 {
@@ -606,15 +618,35 @@ padding: 2rem;
 
 .kenntnisse-container {
   display: grid;
-  width: 90%;
+  align-items: center;
+  background-color: #4b1e66;
+  grid-template-areas: "überschrift" "text";
+  grid-template-columns: 100%;
+  margin-top: 40px;
+}
+
+.kenntnisse-überschritft {
+  display: grid;
+  align-items: center;
+  width: 300px;
+  height: 60px;
+  text-align: center;
+  border: 5px solid #732e9b;
+  background-color: #39164d;
   margin-left: auto;
   margin-right: auto;
-  background-color: #4b1e66;
-  grid-template-areas: "überschrift text" "bild text";
+  border-radius: 120px;
+  align-self: center;
+  box-shadow: 0px 0px 35px 8px #2F1340;
+}
+
+.kenntnisse-überschritft > h1 {
+  margin: 0;
 }
 
 .kenntnisse-text {
   grid-area: text;
+  width: 75%;
   text-align: left;
   color: white;
   font-size: 1.3rem;
@@ -622,7 +654,11 @@ padding: 2rem;
   background-color: #2f1340;
   border-radius: 25px;
   padding: 0 1.5rem; 
-  margin: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 0px 35px 8px #2F1340;
 }
 
 .kenntnisse-bild {
@@ -635,26 +671,6 @@ padding: 2rem;
     margin-bottom: 30px;
 }
 
-@media (max-width: 768px) {
-  .kenntnisse-container {
-    display: grid;
-    background-color: #4b1e66;
-    grid-template-areas: "überschrift" "text";
-  }
-  
-  .kenntnisse-bild {
-  display: none;
-  }
-
-  .kenntnisse-text {
-    grid-area: text;
-    text-align: left;
-    color: white;
-    font-size: 1.4rem;
-    padding: 0 1rem; 
-    margin: .5rem;
-  }
-}
 
 /* ===footer=== */
 
